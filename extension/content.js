@@ -1,7 +1,7 @@
 // content.js — runs on leetcode.com pages
 // Watches for "Accepted" submission result and sends to our backend
 
-const API_BASE = 'https://b663-2409-40c4-4e-736b-fded-7253-27e-e157.ngrok-free.app'; // replace after deploy
+const API_BASE = 'https://dsa-revision-8m1y.onrender.com'; // replace after deploy
 
 let lastLoggedSlug = null;
 let lastLoggedDate = null;

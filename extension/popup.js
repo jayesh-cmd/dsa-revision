@@ -1,5 +1,5 @@
 // popup.js
-const API_BASE = 'https://b663-2409-40c4-4e-736b-fded-7253-27e-e157.ngrok-free.app'; // replace after deploy
+const API_BASE = 'https://dsa-revision-8m1y.onrender.com'; // replace after deploy
 
 const setupSection = document.getElementById('setup-section');
 const connectedSection = document.getElementById('connected-section');
