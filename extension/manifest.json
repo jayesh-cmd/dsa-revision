@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "DSA Revision Tracker",
+  "version": "1.0.0",
+  "description": "Automatically tracks your LeetCode solved questions and schedules spaced revision reminders via Telegram.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

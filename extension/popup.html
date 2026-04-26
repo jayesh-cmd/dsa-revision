@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>DSA Revision Tracker</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      width: 300px;
+      padding: 20px;
+      background: #0f0f1a;
+      color: #e0e0e0;
+    }
+    h1 { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: #fff; }
+    p.sub { font-size: 12px; color: #888; margin-bottom: 20px; }
+    label { font-size: 12px; color: #aaa; display: block; margin-bottom: 6px; }
+    input {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #1a1a2e;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 12px;
+      font-family: monospace;
+      letter-spacing: 0.05em;
+    }
+    input:focus { outline: none; border-color: #7c6af7; }
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #7c6af7;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    button:hover { background: #6a56e0; }
+    .status {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      display: none;
+    }
+    .status.success { background: #1a3a2a; color: #4caf8a; display: block; }
+    .status.error { background: #3a1a1a; color: #f07070; display: block; }
+    .status.info { background: #1a2a3a; color: #70a0f0; display: block; }
+    .divider { border-top: 1px solid #222; margin: 16px 0; }
+    .connected-info { font-size: 12px; color: #888; text-align: center; }
+    .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4caf8a; margin-right: 6px; }
+    .dot.red { background: #f07070; }
+  </style>
+</head>
+<body>
+  <h1>DSA Revision Tracker</h1>
+  <p class="sub">Auto-tracks LeetCode solves & reminds via Telegram</p>
+
+  <div id="setup-section">
+    <label>Your Telegram Link Code</label>
+    <input type="text" id="link-code" placeholder="DSA-XXXX" maxlength="8" />
+    <button id="activate-btn">Connect Extension</button>
+    <div class="status" id="status-msg"></div>
+
+    <div class="divider"></div>
+    <p style="font-size:12px; color:#888; line-height:1.6;">
+      1. Open Telegram<br>
+      2. Message <strong style="color:#aaa">@YourBotName</strong> with /start<br>
+      3. Copy the code the bot gives you<br>
+      4. Paste it above and hit Connect
+    </p>
+  </div>
+
+  <div id="connected-section" style="display:none; text-align:center; padding: 10px 0;">
+    <p style="font-size:24px; margin-bottom:8px;">✅</p>
+    <p style="font-size:14px; color:#fff; font-weight:500;">Extension Connected!</p>
+    <p style="font-size:12px; color:#888; margin-top:6px;">Solving any LeetCode question will now automatically be tracked.</p>
+    <div class="divider"></div>
+    <p class="connected-info"><span class="dot"></span>Linked to Telegram</p>
+    <br>
+    <button id="disconnect-btn" style="background:#2a1a1a; color:#f07070; border:1px solid #3a1a1a;">Disconnect</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
