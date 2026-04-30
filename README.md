@@ -62,7 +62,3 @@ The question carries forward once with a ⚠️ tag. Miss it again → marked as
 **Extension not detecting submission** — make sure you're on the actual submission result page showing "Accepted" and the extension is enabled in `chrome://extensions/`.
 
 ---
-
-## For self-hosting
-
-If you want to run your own instance of this project, check `SELF_HOSTING.md`.
